@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+<body>
+
+
+
+<div id="root"></div>
+
+<script type="text/javascript">
+
+    const h1= React.createElement("h1",{key:1},"Con lo visto hasta ahora");
+
+    const h2= React.createElement("h2",{key:2},"Replica este html");
+    
+    const h3= React.createElement("h3",{key:3},"Usando");
+    
+    const h4= React.createElement("h4",{key:4},"React.js");
+    
+    const footer= React.createElement("footer",{key:5},"Suerte!"); 
+    
+    const div= React.createElement("div",null,[h1,h2,h3,h4,footer]);
+    ReactDOM.render(div, document.getElementById("root"));
+
+</script> 
+
+<script type="text/babel">
+
+const div2= (
+    <div>
+    <p key={1}>Hola</p>
+    <p key={2}>Hola</p>
+    </div>)
+
+    ReactDOM.render(div2, document.getElementById("root"));
+
+</script>
+
+</body>
+
+
+
+
+</html>
